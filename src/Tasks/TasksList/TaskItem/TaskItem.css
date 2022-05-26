@@ -1,0 +1,10 @@
+.icon-container {
+    display: flex;
+    gap: 5px;
+}
+
+.d-flex {
+
+    display: flex;
+    justify-content: space-between;
+}
