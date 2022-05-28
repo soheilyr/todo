@@ -1,0 +1,15 @@
+.filter-task-form {
+    margin-top: 20px;
+}
+
+.filter-task-form select {
+    border: 1px solid #d3d3d3;
+    border-radius: 20px;
+    width: 40%;
+    padding: 10px;
+}
+
+.filter-task-form select:focus-visible {
+    border: 1px solid lightgray;
+    outline: none;
+}

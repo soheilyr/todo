@@ -9,12 +9,12 @@ import "./TaskItem.css";
 import EditTaskForm from "../../EditTaskForm/EditTaskForm";
 const TaskItem = (props) => {
   const taskCTX = useContext(TasksContext);
-  console.log(props);
-  const [showTaskModal, setShowTaskModal] = useState(false);
+
   const showModalHandler = () => {
     taskCTX.setEditState(props.id, true);
   };
   const isCompeleted = props.isCompeleted ? "done" : "";
+
   return (
     <Card className={`${isCompeleted}`}>
       <div className="d-flex">

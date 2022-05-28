@@ -17,8 +17,6 @@ function TaskProvider(props) {
     setTasks(newTasks);
   };
   const EditTasksHandler = (id, newValue) => {
-    console.log("add tasks handler", id);
-    console.log(newValue);
     const newTasks = [...tasks];
     const selectedIndex = newTasks.findIndex((item) => item.id === id);
     newTasks[selectedIndex].name = newValue;
@@ -31,11 +29,9 @@ function TaskProvider(props) {
     setTasks(newTasks);
   };
   const RemoveTasksHandler = (id) => {
-    console.log("remove handler ran", id);
     let newTasks = [...tasks];
 
     newTasks = newTasks.filter((item) => item.id !== id);
-    console.log(newTasks);
     setTasks(newTasks);
   };
   const DoneTasksHandler = (id) => {

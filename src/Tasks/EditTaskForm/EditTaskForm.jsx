@@ -10,7 +10,8 @@ const EditTaskForm = (props) => {
     setInputValue(e.target.value);
     setError(false);
   };
-  const submitHandler = () => {
+  const submitHandler = (e) => {
+    e.preventDefault();
     if (!inputValue.trim() == "") {
       taskCTX.EditTasksHandler(props.taskId, inputValue);
       taskCTX.setEditState(props.taskId, false);
@@ -23,7 +24,7 @@ const EditTaskForm = (props) => {
   };
   return (
     <Modal onSubmitHandler={submitHandler} onCancelHandler={onCancelHandler}>
-      <form action="">
+      <form onSubmit={submitHandler} action="">
         <input
           className={styles.editInput}
           type="text"

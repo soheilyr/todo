@@ -1,0 +1,20 @@
+.leftTasksContainer {
+    width: fit-content;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 10px 30px;
+    background-color: white;
+    -webkit-box-shadow: 1px 2px 9px 5px rgb(0 0 0 / 14%);
+    box-shadow: 1px 2px 9px 5px rgb(0 0 0 / 14%);
+
+}
+
+.leftTasksContainer span:nth-child(2) {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.leftTasksContainer span:nth-child(1) {
+    top: -2px;
+}
