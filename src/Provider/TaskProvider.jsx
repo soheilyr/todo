@@ -12,11 +12,23 @@ function TaskProvider(props) {
       id: Math.floor(Math.random() * 10000),
       date: `${year} / ${month} / ${day}`,
       isCompeleted: false,
+      editState: false,
     });
     setTasks(newTasks);
   };
-  const EditTasksHandler = () => {
-    console.log("add tasks handler");
+  const EditTasksHandler = (id, newValue) => {
+    console.log("add tasks handler", id);
+    console.log(newValue);
+    const newTasks = [...tasks];
+    const selectedIndex = newTasks.findIndex((item) => item.id === id);
+    newTasks[selectedIndex].name = newValue;
+    setTasks(newTasks);
+  };
+  const setEditState = (id, state) => {
+    const newTasks = [...tasks];
+    const selectedIndex = newTasks.findIndex((item) => item.id === id);
+    newTasks[selectedIndex].editState = state;
+    setTasks(newTasks);
   };
   const RemoveTasksHandler = (id) => {
     console.log("remove handler ran", id);
@@ -39,6 +51,7 @@ function TaskProvider(props) {
     EditTasksHandler,
     RemoveTasksHandler,
     DoneTasksHandler,
+    setEditState,
   };
   return (
     <TasksContext.Provider value={contextValue}>

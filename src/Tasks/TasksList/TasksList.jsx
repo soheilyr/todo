@@ -13,6 +13,7 @@ const TaskList = () => {
             key={item.id}
             id={item.id}
             isCompeleted={item.isCompeleted}
+            editState={item.editState}
           />
         );
       })}
