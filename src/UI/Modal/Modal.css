@@ -1,18 +1,58 @@
-.modal {
+.modal-container {
     position: fixed;
     height: 100%;
-    background-color: red;
+    background-color: rgba(42, 42, 42, 0.397);
     padding: 1rem;
     width: 100%;
     top: 0;
     right: 0;
+    z-index: 5;
     color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.display-none {
-    display: none;
+.modal {
+    width: 40%;
+    border-radius: 20px;
+    background-color: white;
+    -webkit-box-shadow: 1px -1px 22px 5px rgba(0, 0, 0, 0.24);
+    box-shadow: 1px -1px 22px 5px rgba(0, 0, 0, 0.24);
+    padding: 20px 10px;
 }
 
-.display-block {
-    display: block;
+.modal h2 {
+    text-align: center;
+}
+
+.submit-btn {
+    background-color: rgb(44, 162, 21);
+    color: white;
+    border-radius: 5px;
+    padding: 4px 10px;
+    border: none;
+    font-size: 17px;
+    transition: all 0.3s linear;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: rgb(1, 185, 1);
+}
+
+.cancel-btn:hover {
+    background-color: rgb(207, 18, 18);
+}
+
+.cancel-btn {
+    background-color: rgb(182, 13, 13);
+    color: white;
+    border-radius: 5px;
+    padding: 4px 10px;
+    border: none;
+    font-size: 17px;
+    margin: 0 20px;
+    transition: all 0.1s linear;
+    margin-top: 10px;
 }

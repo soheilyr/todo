@@ -1,0 +1,23 @@
+.editInput {
+    width: 90%;
+    border-radius: 20px;
+    height: 25px;
+    font-size: 20px;
+    border: 1px solid lightgray;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    transition: all 0.3s linear;
+}
+
+.editInput:focus-visible {
+    border: 1px solid rgb(136, 135, 135);
+    outline: none;
+}
+
+.errorMsg {
+    color: red;
+    margin-bottom: 20px;
+    margin-top: 0;
+    text-align: start;
+    padding-left: 5%;
+}
